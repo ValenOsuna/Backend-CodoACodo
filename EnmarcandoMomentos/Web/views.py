@@ -1,9 +1,7 @@
 from django.shortcuts import render
+from Noticias.models import Noticia
 
 # Create your views here.
-
-def index(request):
-    return render(request, 'Web/index.html')
 
 def about(request):
     return render(request, 'Web/about.html')
@@ -16,3 +14,7 @@ def user(request):
 
 def register(request):
     return render(request, 'Web/register.html')
+
+def index(request):
+    Noticias = Noticia.objects.all()
+    return render(request, 'Web/index.html', {'Noticias': Noticias})
