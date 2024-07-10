@@ -1,0 +1,29 @@
+{% extends "Web/base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center mt-5">
+        <h1 class="display-4">Bienvenido a Mi Proyecto</h1>
+        <p class="lead">Proporcionando soluciones innovadoras para un futuro mejor.</p>
+        <hr class="my-4">
+        <p>Descubre más sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Sobre Nosotros</a>
+        <a class="btn btn-secondary btn-lg" href="{% url 'contact' %}" role="button">Contacto</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <h2>Nuestro Equipo</h2>
+                <p>
+                    Conoce a nuestro talentoso equipo de profesionales que están aquí para ayudarte. Cada miembro de nuestro equipo es un experto en su campo y está comprometido con el éxito de nuestros clientes.
+                </p>
+                <a class="btn btn-outline-primary" href="{% url 'about' %}">Conócenos</a>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

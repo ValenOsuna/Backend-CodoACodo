@@ -1,0 +1,37 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}
+    Proyectos | {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Nuestros Proyectos</h2>
+            {% for causa in causas %}
+            <div class="card mb-3">
+                <img src="{{ causa.image.url }}" class="card-img-top img-fluid" alt="{{ causa.title }}" style="max-height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ causa.tittle }}</h5>
+                    <p class="card-text">{{ causa.description }}</p>
+                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No hay causas disponibles.</p>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4">
+            <h2>Donaciones</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">¿Quieres apoyarnos?</h5>
+                    <p class="card-text">Tu contribución puede hacer la diferencia.</p>
+                    <a href="#" class="btn btn-primary">Haz una donación</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
