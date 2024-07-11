@@ -1,0 +1,13 @@
+{% extends "Web/base.html" %}
+
+{% block title %}Mensaje Enviado{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center mt-5">
+    <h1 class="display-4">Mensaje Enviado</h1>
+    <p class="lead">¡Tu mensaje ha sido enviado correctamente!</p>
+    <hr class="my-4">
+    <p>Gracias por ponerte en contacto con nosotros.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'Index' %}" role="button">Volver a Inicio</a>
+</div>
+{% endblock %}

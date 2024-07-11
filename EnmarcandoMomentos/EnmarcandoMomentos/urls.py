@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Web import views
-from Causas.views import Donar
+
 from django.conf import settings
 from django.conf.urls.static import static
+
+from Web import views
+from Causas.views import Donar
+from Noticias.views import Deporte , Mundo , Negocios , Salud
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("" , views.index , name= "Index" ),
@@ -27,8 +30,14 @@ urlpatterns = [
     path("Contacto" , views.contact , name= "contact" ),
     path("Usuarios" , views.user , name= "user" ),
     path("Registrar" , views.register , name= "registrar" ),
-    path("Donar" , Donar , name= "donar" )
+    path("Mensaje" , views.mensaje , name="Mensaje" ),
+
+    path("Donar" , Donar , name= "donar" ),
     
+    path("Deporte" , Deporte, name ="Deporte"),
+    path("Mundo" , Mundo , name="Mundo"),
+    path("Negocios" , Negocios , name ="Negocios"),
+    path("Salud" , Salud , name= "Salud")
 ]
 
 if settings.DEBUG:

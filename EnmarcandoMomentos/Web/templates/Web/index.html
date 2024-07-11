@@ -16,13 +16,21 @@
         <a class="btn btn-secondary btn-lg" href="#" role="button">Deportes</a>
     </div>
 {%for Noticia in Noticias%}
-    <div class="container">
-        <div class="card mb-3">
-            <img src="{{ Noticia.image.url }}" class="card-img-top img-fluid" alt="{{ Noticia.title }}" style="max-height: 300px; object-fit: cover;">
-            <div class="card-body">
-                <h5 class="card-title">{{ Noticia.Title }}</h5>
-                <p class="card-text">{{ Noticia.description }}</p>
-                <p class="card-text">{{ Noticia.sector }}</p>
+<div class="container">
+    <div class="card mb-3">
+        <div class="d-flex justify-content-center">
+            <img src="{{ Noticia.image.url }}" class="card-img-top img-fluid" alt="{{ Noticia.title }}" style="max-width: 350px; max-height: 350px; object-fit: cover;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ Noticia.Title }}</h5>
+            <p class="card-text">{{ Noticia.description }}</p>
+            <p class="card-text">{{ Noticia.sector }}</p>
+        </div>
+    </div>
+</div>
+
+
+
                 
             </div>
         </div>

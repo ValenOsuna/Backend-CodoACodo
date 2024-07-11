@@ -16,5 +16,12 @@ def register(request):
     return render(request, 'Web/register.html')
 
 def index(request):
-    Noticias = Noticia.objects.all()
+    Notas = Noticia.objects.all()
+    Noticias = []
+    for i in Notas:
+        if len(Noticias) < 1:
+            Noticias.append(i)
     return render(request, 'Web/index.html', {'Noticias': Noticias})
+
+def mensaje(request):
+    return render(request, 'Web/mensaje.html')

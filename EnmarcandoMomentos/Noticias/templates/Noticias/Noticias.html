@@ -1,0 +1,29 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}
+    Noticias | {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            {% for Noticia in Noticias %}
+            <div class="card mb-3">
+                <img src="{{ Noticia.image.url }}" class="card-img-top img-fluid" alt="{{ Noticia.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ Noticia.Title }}</h5>
+                    <p class="card-text">{{ Noticia.description }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <div class="alert alert-info" role="alert">
+                No hay noticias disponibles.
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

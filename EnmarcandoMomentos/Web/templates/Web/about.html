@@ -1,4 +1,6 @@
 {% extends "Web/base.html" %}
+{% load static %}
+
 
 {% block title %}About Us{% endblock %}
 
@@ -21,17 +23,18 @@
         </div>
         <div class="row mt-4">
             <div class="col-md-6">
-                <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Imagen de la misión">
+                <img style="width: 500px; height: 300px;" src="{% static 'web/tapas-960x640.jpeg' %}" class="img-fluid" alt="Imagen de la misión">
             </div>
+            
             <div class="col-md-6">
-                <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Imagen del equipo">
+                <img style="width: 500px; height: 300px;" src="{% static '\web\Mariana-Mandakovic-CISPREN-periodismo-medios-comunicación-radio-2.jpg' %}" class="img-fluid" alt="Imagen de la misión">
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-12">
                 <h2>Historia</h2>
                 <p>
-                    Mi Proyecto fue fundado en [año] con el objetivo de [objetivo principal]. Desde entonces, hemos crecido y evolucionado, ampliando nuestro alcance y mejorando continuamente nuestros servicios para satisfacer las necesidades de nuestros clientes.
+                    Mi Proyecto fue fundado en 2012 con el objetivo de mejorar el acceso a la educación en comunidades rurales. Desde entonces, hemos crecido y evolucionado, ampliando nuestro alcance para incluir programas de salud y desarrollo económico. Gracias al apoyo de nuestros colaboradores y voluntarios, hemos podido impactar positivamente la vida de miles de personas, creando un futuro más prometedor para las generaciones venideras.
                 </p>
             </div>
         </div>
