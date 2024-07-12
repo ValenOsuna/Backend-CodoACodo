@@ -12,8 +12,8 @@
         <p class="lead">Mantente informado con las noticias más recientes y relevantes.</p>
         <hr class="my-4">
         <p>Explora nuestras secciones para encontrar artículos interesantes y actualizaciones importantes.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Tecnología</a>
-        <a class="btn btn-secondary btn-lg" href="#" role="button">Deportes</a>
+        <a class="btn btn-primary btn-lg" href="{%url 'Mundo'%}" role="button">Mundo</a>
+        <a class="btn btn-secondary btn-lg" href="{%url 'Negocios'%}" role="button">Negocios</a>
     </div>
 {%for Noticia in Noticias%}
 <div class="container">
@@ -39,10 +39,10 @@
         {% endfor %}
                 <h2>Categorías</h2>
                 <ul>
-                    <li><a href="#">Mundo</a></li>
-                    <li><a href="#">Negocios</a></li>
-                    <li><a href="#">Salud</a></li>
-                    <li><a href="#">Entretenimiento</a></li>
+                    <li><a href="{% url 'Mundo' %}">Mundo</a></li>
+                    <li><a href="{%url 'Negocios'%}">Negocios</a></li>
+                    <li><a href="{%url 'Salud'%}">Salud</a></li>
+                    <li><a href="{%url 'Deporte'%}">Deporte</a></li>
                 </ul>
             </div>
         </div>
